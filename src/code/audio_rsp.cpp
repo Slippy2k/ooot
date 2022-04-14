@@ -156,10 +156,10 @@ AudioTask* getAudioTask() {
     task = &gAudioContext.currTask->task.t;
     task->type = M_AUDTASK;
     task->flags = 0;
-    task->ucode_boot = D_801120C0;
+    task->ucode_boot = rspAspMainText;
     task->ucode_boot_size = 0x1000;
     task->ucode_data_size = (sizeof(rspAspMainDataStart) * sizeof(u64)) - 1;
-    task->ucode = D_801120C0;
+    task->ucode = rspAspMainText;
     task->ucode_data = (u64*)rspAspMainDataStart;
     task->ucode_size = 0x1000;
     task->dram_stack = NULL;
